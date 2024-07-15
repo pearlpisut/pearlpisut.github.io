@@ -1,0 +1,101 @@
+import React, { useState, useEffect } from 'react';
+import './blogsection.scss'
+import Link from 'next/link';
+
+const BlogSection = ({prop}) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [currentContent, setCurrentContent] = useState(<div>Blog section is loading</div>);
+  const [currentTag, setCurrentTag] = useState('highlighted')
+
+  const genColor = (tag, color) => {
+    return `${tag == currentTag ? `bg-${color}-500` : `bg-${color}-300`} hover:bg-${color}-500`
+  }
+
+  const notes = prop
+  const notesPerPage = 5;
+  const renderNotes = () => {
+    const startIndex = (currentPage - 1) * notesPerPage;
+    const endIndex = startIndex + notesPerPage;
+    const chosenNotes = currentTag == "all" ? notes : notes.filter(note => note.tag.some(tag => tag === currentTag))
+    setCurrentContent(chosenNotes.slice(startIndex, endIndex).map(note => {
+      const blogUrl = `/${note.id}`
+      return (
+        <div key={note.id} id="blog" className=''>
+          <div id="title" className='font-sans w-11/12 xl:text-3xl md:text-3xl text-2xl font-bold'>
+            <Link href={blogUrl} className=''>
+                  {note.title}
+            </Link>
+          </div>
+          <div id="highlight" className='font-serif w-11/12'> {note.highlight} </div>
+          <div id="written">By Pearl on {note.written_date}</div>
+        </div>
+      )}
+    ));
+  };
+  const totalPages = Math.ceil(notes.length / notesPerPage);
+
+
+  const nextPage = () => {
+    const totalPages = Math.ceil(notes.length / notesPerPage);
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  useEffect(() => {
+    renderNotes();
+  }, [currentPage, currentTag]);
+
+  return (
+    <div>
+      <div id="tags-bar">
+        <div className={`tag ${currentTag=="all" ? "bg-zinc-500" : "bg-zinc-200"} 
+                        hover:bg-zinc-500 text-white font-normal py-1 px-3 rounded-full`} 
+          onClick={()=>setCurrentTag("all")}>all</div>
+        <div className={`tag ${currentTag=="highlighted" ? "bg-orange-500" : "bg-amber-300"} 
+                        hover:bg-orange-500 text-white font-normal py-1 px-3 rounded-full`} 
+          onClick={()=>setCurrentTag("highlighted")}>highlighted</div>
+        <div className={`tag ${currentTag=="travel" ? "bg-indigo-500" : "bg-indigo-200"} 
+                        hover:bg-indigo-500 text-white font-normal py-1 px-3 rounded-full`}
+          onClick={()=>setCurrentTag("travel")}>travel</div>
+        <div className={`tag ${currentTag=="work" ? "bg-blue-500" : "bg-blue-200"} 
+                        hover:bg-blue-500 text-white font-normal py-1 px-3 rounded-full`} 
+          onClick={()=>setCurrentTag("work")}>work</div>
+        <div className={`tag ${currentTag=="uni" ? "bg-emerald-500" : "bg-emerald-200"} 
+                        hover:bg-emerald-500 text-white font-normal py-1 px-3 rounded-full`} 
+          onClick={()=>setCurrentTag("uni")}>uni</div>
+        <div className={`tag ${currentTag=="self-discovery" ? "bg-cyan-600" : "bg-cyan-200"} 
+                        hover:bg-cyan-600 text-white font-normal py-1 px-3 rounded-full`} 
+          onClick={()=>setCurrentTag("self-discovery")}>self-discovery</div>
+      </div>
+      <div id="notes-container">
+        {currentContent}
+      </div>
+      <div className="blog-navigator">
+        <div>
+          <button 
+            className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-1.5 px-3 rounded-l' 
+            style={{borderRight: "1px solid black", cursor: currentPage===1 ? "not-allowed" : "pointer"}}
+            onClick={prevPage} disabled={currentPage === 1}>
+              prev
+          </button>
+          <button 
+            className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-1.5 px-3 rounded-r'
+            style={{cursor: currentPage===totalPages ? "not-allowed" : "pointer"}}
+            onClick={nextPage} disabled={currentPage === totalPages}>
+              next
+          </button>
+        </div>
+        <div>Page {currentPage} of {totalPages}</div>
+      </div>
+    </div>
+  );
+};
+
+export default BlogSection;
