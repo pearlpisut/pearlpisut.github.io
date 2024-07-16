@@ -5,7 +5,7 @@ import Bloglayout from '@/components/blogpage/bloglayout';
 
 export async function generateStaticParams() {
   const paths = mergedData.map((post) => ({
-    params: { blog: post.id },
+    blog: post.id,
   }));
   return paths;
 }
