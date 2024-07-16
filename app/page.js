@@ -8,7 +8,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main>
-      <div className="body profile-sec flex flex-wrap w-3/4 lg:w-3/5">
+      <div className="body profile-sec flex flex-wrap w-3/4 lg:w-1/2">
         <div className="profile-pic w-7/12 sm:w-3/4 md:w-5/12">
           <img src='/pictures/pearl3.jpg' className='profile-pic'/>
         </div>
@@ -17,7 +17,7 @@ export default function Home() {
             Pearl Phutanate Pisutsin
           </h1>
           <div className="bio-desc">
-            Hi there! I'm Pearl, and I've made this site to tell you more about myself.
+            Hey! It's Pearl. I've made this site to tell you more about myself.
           </div>
           <div className="bio-desc">
               {/* <Link className='prof-link' id='cuhk' href='https://www.cse.cuhk.edu.hk/'> (CUHK)</Link>.  */}
@@ -44,14 +44,15 @@ export default function Home() {
             <div>Convinced?! Find me at </div>
             <div id="contact" className='mt-2'>
               <a className='text-indigo-700 hover:text-amber-500' href="mailto:pearlphutanate@gmail.com" target="_blank">(email)</a>
-              <a className='text-indigo-700 hover:text-amber-500' href="https://www.instagram.com/pearl1st/" target="_blank">(instagram)</a>
               <a className='text-indigo-700 hover:text-amber-500' href="https://www.linkedin.com/in/phutanate/" target="_blank">(linkedin)</a>
+              <a className='text-indigo-700 hover:text-amber-500' href="https://github.com/pearlpisut" target="_blank">(github)</a>
+              <a className='text-indigo-700 hover:text-amber-500' href="https://www.instagram.com/pearl1st/" target="_blank">(instagram)</a>
               <a className='text-indigo-700 hover:text-amber-500' href="" target="_blank">(CV)</a>
             </div>
           </div>
         </div>
       </div>
-      <div className="body blog-sec w-3/4 lg:w-3/5">
+      <div className="body blog-sec w-3/4 lg:w-1/2">
         <BlogSection prop={mergedData}/>
       </div>
     </main>

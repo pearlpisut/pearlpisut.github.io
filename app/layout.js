@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <div id="top-bar" className="text-2xl">
           <Link href='/' style={{
             cursor: "poniter",
-            color: "black !important"
+            color: "black !important",
           }}>pearl</Link>
         </div>
         <div style={{height: "70px"}}></div>

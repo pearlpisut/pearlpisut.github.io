@@ -20,10 +20,6 @@ main {
     flex-direction: row-reverse;
 }
 
-.bio{
-    // flex: 0 0 60%
-}
-
 h1{
     font-family: 'Helvetica', 'Arial', sans-serif;
     font-weight: 500;
@@ -40,7 +36,6 @@ div.bio-desc{
     align-items: center;
     justify-content: center;
     // height: 90%;
-    // flex: 0 0 40%;
     img {
         margin: auto;
         max-height: 300px;
@@ -59,7 +54,7 @@ div.bio-desc{
     justify-content: center;
     display: flex;
     * {
-        margin: 0 7px;;
+        margin: 0 5px;
     }
 }
 
