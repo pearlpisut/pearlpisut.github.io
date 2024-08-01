@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <div className="body profile-sec flex flex-wrap w-3/4 lg:w-1/2">
         <div className="profile-pic w-7/12 sm:w-3/4 md:w-5/12">
-          <img src='/pictures/pearl3.jpg' className='profile-pic'/>
+          <img src='/pictures/pearl1.jpg' className='profile-pic'/>
         </div>
         <div className="bio w-full md:w-7/12">
           <h1 className="bio-desc text-center md:text-left text-xl sm:text-2xl font-semibold md:mt-0 mt-5">
@@ -24,7 +24,7 @@ export default function Home() {
             I'm a final year CS major at The Chinese University of Hong Kong. 
           </div>
           <div className="bio-desc">
-            I'm currently studying <secion className="text-blue-600">Deep Learning</secion> , and have worked 
+            I'm currently studying <secion className="text-blue-600">Deep Learning</secion>, and have worked 
             in <secion className="text-blue-600">full-stack dev </secion>  
             at <Link className='prof-link underline text-indigo-700 hover:text-amber-500' id='pantheon' href='https://www.pantheonlab.ai/'>Pantheon Lab</Link>. 
             See my CV for full details!
@@ -51,6 +51,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="body w-3/4 lg:w-1/2">
+        I also spend quite some time try writing these blogs ;)
       </div>
       <div className="body blog-sec w-3/4 lg:w-1/2">
         <BlogSection prop={mergedData}/>

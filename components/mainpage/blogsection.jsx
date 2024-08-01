@@ -12,15 +12,15 @@ const BlogSection = ({prop}) => {
   }
 
   const notes = prop
+  const notes_shown = currentTag == "all" ? notes : notes.filter(note => note.tag.some(tag => tag === currentTag))
   const notesPerPage = 5;
   const renderNotes = () => {
     const startIndex = (currentPage - 1) * notesPerPage;
     const endIndex = startIndex + notesPerPage;
-    const chosenNotes = currentTag == "all" ? notes : notes.filter(note => note.tag.some(tag => tag === currentTag))
-    setCurrentContent(chosenNotes.slice(startIndex, endIndex).map(note => {
+    setCurrentContent(notes_shown.slice(startIndex, endIndex).map(note => {
       const blogUrl = `/${note.id}`
       return (
-        <div key={note.id} id="blog" className=''>
+        <div key={note.id} id="blog-box" className='mb-5'>
           <div id="title" className='font-sans w-11/12 xl:text-3xl md:text-3xl text-2xl font-bold'>
             <Link href={blogUrl} className=''>
                   {note.title}
@@ -51,6 +51,11 @@ const BlogSection = ({prop}) => {
   useEffect(() => {
     renderNotes();
   }, [currentPage, currentTag]);
+
+  // to reset to show page 1 when choosing a different tag.
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [currentTag])
 
   return (
     <div>
@@ -92,7 +97,7 @@ const BlogSection = ({prop}) => {
               next
           </button>
         </div>
-        <div>Page {currentPage} of {totalPages}</div>
+        <div>Page {currentPage} of {Math.ceil(notes_shown.length/5)}</div>
       </div>
     </div>
   );

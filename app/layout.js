@@ -5,8 +5,8 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Pearl Phutanate",
-  description: "my personal site",
+  title: "Pearl Phutanate Pisutsin",
+  description: "my personal site - what I want to tell you beyond the resume.",
 };
 
 export default function RootLayout({ children }) {

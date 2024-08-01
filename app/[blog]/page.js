@@ -19,6 +19,6 @@ export default async function BlogPage({ params }) {
   const post = await getData(params.blog);
   if (!post) notFound();
   return (
-    <Bloglayout prop = {post} ></Bloglayout>
+    <Bloglayout prop = {post} allBlock = {mergedData}></Bloglayout>
   );
 }

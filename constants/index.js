@@ -2,8 +2,8 @@ import toronto from './blogs/1-toronto.js'
 import morocco from './blogs/2-morocco.js'
 import firstInternship from './blogs/3-first-internship.js'
 import southAfrica from './blogs/4-southAfrica.js'
-// import tmpp from './blogs/5-tmpp.json'
-// import tmppp from './blogs/6-tmppp.json'
+import singapore from './blogs/5-singapore.js'
+import covidProject from './blogs/6-covid-project.js'
 
 
 const mergedData = [
@@ -11,8 +11,8 @@ const mergedData = [
     morocco,
     firstInternship,
     southAfrica,
-    // tmpp,
-    // tmppp
+    singapore,
+    covidProject
 ]
 
 export default mergedData
