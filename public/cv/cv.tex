@@ -1,0 +1,179 @@
+\documentclass[letterpaper,10.8pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{CJKutf8}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo} %determines font
+\usepackage{MnSymbol}
+\usepackage{wasysym}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}
+{\vspace{-3pt}\scshape\raggedright\large}
+{}
+{0em}
+{}
+[\color{black}\titlerule \vspace{-5pt}]
+
+\titleformat{\subsection}
+{}
+{0em}
+{}
+{}
+%-------------------------
+% Custom commands
+
+\newcommand{\headerrow}[4]{%
+  \vspace{#4}
+  \begin{tabular*}{\dimexpr\linewidth}{@{\extracolsep{\fill}}lr@{}}
+    \hspace{#1}\hspace{0.1cm} #2 &
+    #3 \\
+  \end{tabular*}%
+}
+
+\newcommand{\bul}[1][.5]{
+  \mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}
+}
+
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\huge Phutanate Pisutsin}} & \href{https://www.linkedin.com/in/phutanate/}{linkedin.com/in/Phutanate} \\
+  \href{mailto:pearlphutanate@gmail.com}{pearlphutanate@gmail.com} &  \href{https://pearlpisut.github.io}{pearlpisut.github.io} \\
+  % Shatin, Hong Kong1 &  \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{\textbf{Education}}
+\headerrow{0cm}{\textbf{The Chinese University of Hong Kong}}{\textit{Sep 2021 - May 2025}}{0mm}
+\headerrow{3mm}{\textbf{B.Sc. in Computer Science} $\mid$ \textbf{CGPA}: 3.73/4.00.}{\textbf{IELTS:} 8.0, \textbf{HSK} Lv. II}{0mm} 
+\headerrow{3mm}{\textbf{Honors $\&$ Awards}: Dean's List, Master's List, Honors at Entrance.}{}{0mm}
+\headerrow{3mm}{\textbf{Highlighted Coursework}: OOP, Data Structures, Software Engineering, Algorithms Design $\&$ Analysis,}{}{0cm}
+\headerrow{3mm}{Stats $\&$ Probabilities, Operating Systems, Database Systems.}{}{1mm}
+\headerrow{0cm}{\textbf{The University of Toronto }(Exchange semester)}{\textit{Jan 2024 - May 2024}}{0mm}
+\headerrow{3mm}{\textbf{Highlighted Coursework}: Artificial Intelligence, Principle of Programming Languages}{}{0cm}
+
+%-----------EXPERIENCE-----------------
+% \vspace{-10mm}
+\section{\textbf{Work Experience}}
+\headerrow{0mm}{\textbf{\large Pantheon Lab Limited}}{\textbf{Hong Kong}}{0mm}
+\headerrow{0mm}{Full Stack Developer Intern}{\textit{Jun - Aug 2023}}{0mm} \\[0.5mm]
+\vspace{-2.5mm}
+\begin{itemize}[leftmargin=7mm]
+  \itemsep-0.7mm
+  \item[$\filledsquare$] Applied ReactJS to convert 20+ new features and UI designs into 3 web apps: \href{https://www.aidol.studio/}{Aidol Studio}, \href{https://www.matchai.app/}{MatchAI}, \href{https://www.pantheonlab.ai/}{Pantheon Lab}.
+  \item[$\filledsquare$] Created TypeGraphQL APIs to enable mass-email sending in Amazon SES, increasing the daily sending limit by 20x from 100 to 2,000 emails.
+  \item[$\filledsquare$] Developed mutation queries in Apollo GraphQL to interact with PostgreSQL database via Prisma to allow essential account config features in a product with 4,000+ active users.
+  \item[$\filledsquare$] Used Jira, Git, Docker, and Sourcetree to effectively collaborate with 10+ developers in the Agile environment.
+\end{itemize}
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\headerrow{0mm}{\textbf{Sales Systems Application - } \textit{course project (group)} - \href{https://github.com/pearlpisut/csci3170-SalesSystem}{ \textit{Github}}}{\textit{Dec 2023}}{0mm}
+\vspace{-5.5mm}
+\begin{itemize}[leftmargin=7mm]
+  \itemsep-0.7mm
+  \item[$\filledsquare$] Developed SQL queries for 3 interfaces and 10+ operations in Linux environment to create a sales systems simulator.
+  \item[$\filledsquare$] Created Java packages and program to interact with MySQL sever connected via JDBC driver. 
+\end{itemize}
+\headerrow{0mm}{\textbf{Pathfinding Visualizer - } \textit{personal} - \href{https://github.com/pearlpisut/pathfinding-visualizer}{\textit{Github}}}{\textit{Sep 2023}}{0mm}
+\vspace{-5.5mm}
+\begin{itemize}[leftmargin=7mm]
+  \itemsep-0.7mm
+  \item[$\filledsquare$] Applied A* Search and Dijkstra's algorithms to implement the shortest-path finder at 100$\%$ precision.
+  \item[$\filledsquare$] Developed the program and GUI in Python with Pygame where users can select start, end points and place walls.
+\end{itemize}
+\headerrow{0mm}{\textbf{BattleGo! Multiplayer Game - } \textit{course project (group)} - \href{https://github.com/pearlpisut/CSCI3100-Project-E2}{ \textit{Github}}}{\textit{Mar - May 2023}}{0mm}
+\vspace{-5.5mm}
+\begin{itemize}[leftmargin=7mm]
+  \itemsep-0.7mm
+  \item[$\filledsquare$] Led a team of 5: organized meeting; distributed tasks; merged game-logic, frontend, backend, and server codes.
+  \item[$\filledsquare$] Used MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS) to create RESTful APIs, authentications, database connections, and game interfaces.
+  \item[$\filledsquare$] Tested API endpoints and CRUD operations with Postman and prepared Blackbox and Whitebox testing documents.
+\end{itemize}
+\headerrow{0mm}{\textbf{Full-Stack Course Review Blog - }  \textit{personal} - \href{https://github.com/pearlpisut/full-stack-blog-app}{ \textit{Github}}}{\textit{Mar 2023}}{0mm}
+\vspace{-5.5mm}
+\begin{itemize}[leftmargin=7mm]
+  \itemsep-0.7mm
+  \item[$\filledsquare$] Used ReactJS and Hooks: State/Effect/Ref/Context, to enable theme toggling, blog navigation, and search bar.
+  \item[$\filledsquare$] Developed backend and admin system in Django Python with SQLite database.
+  % \item[$\filledsquare$] Created and tested the REST API and CRUD operations for blogs browsing and managing functions using Postman.
+  \item[$\filledsquare$] Incorporated Tailwind to enhance the design coherence and aestheticism.
+\end{itemize}
+
+
+%------------------------------------------
+\section{\textbf{Leadership $\&$ Activities}}
+\headerrow{0mm}{\textbf{President - Thai Students Associations }}{\textit{Feb 2023 - current}}{0mm}
+\vspace{-5.5mm}
+\begin{itemize}[leftmargin=7mm]
+  \itemsep-0.7mm
+  \item[$\filledsquare$] Chaired the 2nd cabinet of the association, involving 40+ members and 6 executive committees.
+  \item[$\filledsquare$] Organized Thai cultural events with $70\%$ participation of foreign students promoting cultural exchanges and bonding.
+\end{itemize}
+\headerrow{0mm}{\textbf{Executive Committee - International Students Associations }}{\textit{Feb 2022 - Feb 2023}}{0mm}
+\vspace{-5.5mm}
+\begin{itemize}[leftmargin=7mm]
+  \itemsep-0.7mm
+  \item[$\filledsquare$] Designed and organized 3 events for over 300 attendees from 20+ countries whilst managing a budget of 20,000+HKD.
+  \item[$\filledsquare$] Created automated tools with Javascript to facilitate new member registration, fastening the process by over 50$\%$.
+  \item[$\filledsquare$] Boosted the association's social media following by 55$\%$ through reels and podcasts production.
+\end{itemize}
+%-------- SKILLS------------
+\section{\textbf{Skills $\&$ Interests}}
+\vspace{-2mm}
+\begin{flalign*}
+  &\text{ Languages:}  &&\text{C/C++ $\bul$ Java $\bul$ Python $\bul$ Javascript $\bul$ Typescript $\bul$ SQL} \hspace{6cm} \\[-0.3mm]
+  &\text{ Web dev:}  &&\text{HTML \& CSS $\bul$ NodeJS $\bul$ ReactJS $\bul$ Bootstrap $\bul$ Tailwind} \hspace{6cm} \\[-0.3mm]
+  &\text{ Technologies:} && \text{Git $\bul$ Linux $\bul$ PostgreSQL $\bul$ MongoDB $\bul$ Django $\bul$ Prisma $\bul$ GraphQL $\bul$ Docker $\bul$ LaTex} \hspace{6cm} \\
+  &\text{ Interests:} && \text{Videography $\bul$ Competitive Programming $\bul$ Basketball $\bul$ Calisthenics $\bul$ Astronomy} \hspace{6cm} 
+  % \\[1mm]
+\end{flalign*}
+
+%-------------------------------------------
+\end{document}
