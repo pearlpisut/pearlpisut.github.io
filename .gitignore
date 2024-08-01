@@ -35,5 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-cv/*
-!cv/*.pdf
+public/cv/*
+public/cv/**
+!public/cv/*.pdf
