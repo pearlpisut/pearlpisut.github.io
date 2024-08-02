@@ -3,19 +3,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;  
-}
-
-#sep-line{
-    height: 1vh;
-    display: flex;
-}
-
-.sep1{
-    background-color: rgb(188, 230, 255);
-}
-.sep2{
-    background-color: rgb(121, 206, 255);
-}
-.sep3{
-    background-color:rgb(52, 176, 248);
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgb(203, 203, 203);
 }

@@ -3,16 +3,10 @@ import './nextBlock.css'
 import Link from 'next/link'
 
 const NextBlock = ({id, title, readTime}) => {
-  const imgSrc = `/pictures/suite-up-pearl.jpg`
+  const imgSrc = `/pictures/${id}.jpg`
 
   return (
     <div>
-      <div id="sep-line" className='w-1/3 mt-10'>
-        <div className="sep1 w-1/3"></div>
-        <div className="sep2 w-1/3"></div>
-        <div className="sep3 w-1/3"></div>
-      </div>
-      <div id="up-next" className='mt-8'>Up Next</div>
       <div id="next-wrapper" className='mt-4'>
         <div className='lg:w-4/6 w-7/12' id="next-teaser">
           <Link href={`/${id}`} id="next-name" className='lg:text-lg text-base font-semibold'>

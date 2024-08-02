@@ -14,7 +14,17 @@
     // margin-top: 20px;
     padding-bottom: 30px;
     border-bottom: 1px solid #d4d4d4;
+    display: flex;
+    position: relative;
+    img{
+        // height: auto;
+        // object-fit: cover;
+    }
 }
+
+// #blog-box-text{
+//     display: flex;
+// }
 
 #title {
     transition: opacity 0.3s ease; // Adds a smooth transition effect

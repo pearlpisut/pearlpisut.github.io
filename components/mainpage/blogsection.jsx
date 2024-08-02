@@ -5,7 +5,7 @@ import Link from 'next/link';
 const BlogSection = ({prop}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentContent, setCurrentContent] = useState(<div>Blog section is loading</div>);
-  const [currentTag, setCurrentTag] = useState('highlighted')
+  const [currentTag, setCurrentTag] = useState('all')
 
   const genColor = (tag, color) => {
     return `${tag == currentTag ? `bg-${color}-500` : `bg-${color}-300`} hover:bg-${color}-500`
@@ -21,13 +21,18 @@ const BlogSection = ({prop}) => {
       const blogUrl = `/${note.id}`
       return (
         <div key={note.id} id="blog-box" className='mb-5'>
-          <div id="title" className='font-sans w-11/12 xl:text-3xl md:text-3xl text-2xl font-bold'>
-            <Link href={blogUrl} className=''>
-                  {note.title}
-            </Link>
+          <div id="blog-box-text" className='lg:w-2/3 w-3/4'>
+            <div id="title" className='font-sans w-11/12 xl:text-2xl md:text-2xl text-lg font-bold'>
+              <Link href={blogUrl} className=''>
+                    {note.title}
+              </Link>
+            </div>
+            <div id="highlight" className='font-serif lg:text-sm text-xs w-11/12'> {note.highlight} </div>
+            <div id="written" className='lg:text-sm text-xs'>By Pearl on {note.written_date}</div>
           </div>
-          <div id="highlight" className='font-serif w-11/12'> {note.highlight} </div>
-          <div id="written">By Pearl on {note.written_date}</div>
+          <div className='lg:w-1/3 w-1/4'>
+            <img className='' src={`/pictures/${note.id}.jpg`} />
+          </div>
         </div>
       )}
     ));

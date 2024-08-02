@@ -21,9 +21,9 @@ const Bloglayout = ({prop, allBlock}) => {
     return Math.ceil(content_length/1200)
   }
 
-  const findNextIndex = (currentId) => {
+  const findNextIndex = (currentId, how_much_next) => {
     const currentIndex = allBlock.findIndex(block => block.id === currentId);
-    return (currentIndex + 1) % allBlock.length; // Ensures wrapping back to the start
+    return (currentIndex + how_much_next) % allBlock.length; // Ensures wrapping back to the start
   };
 
   const handleNextClick = () => {
@@ -37,7 +37,7 @@ const Bloglayout = ({prop, allBlock}) => {
       <div id="blog-header">
         <div id="blog-heading" className='flex flex-col items-center justify-center text-center md:mb-10 mb-5'>
           <h1 id="blog-title" className='font-bold text-white text-xl sm:text-2xl md:text-5xl w-5/6'>{prop.title}</h1>
-          <div id="blog-written-date" className='lg:text-base text-sm'>{prop.written_date}</div>
+          <div id="blog-written-date" className='lg:text-xl lg:mt-5 mt-2 text-sm font-semibold'>{prop.written_date}</div>
           <div id="blog-tags">
             {prop.tag.map((tag, index) => (
               <div key={index} className={`tag ${tagColor[tag]}`}>
@@ -50,11 +50,25 @@ const Bloglayout = ({prop, allBlock}) => {
       </div>
       <div id='read-time' className='mt-5 mb-4'>Read time: {compute_readTime(prop.content.length)} mins</div>
       <div id="blog-content" className='font-serif lg:leading-loose leading-relaxed' dangerouslySetInnerHTML={{ __html: marked(prop.content) }}></div>
+      <div id="sep-line" className='w-1/3 mt-10'>
+        <div className="sep1 w-1/3"></div>
+        <div className="sep2 w-1/3"></div>
+        <div className="sep3 w-1/3"></div>
+      </div>
+      <div id="up-next" className='mt-8'>Up Next</div>
       <NextBlock
         {...{
-          id: allBlock[findNextIndex(currentProp.id)].id,
-          title: allBlock[findNextIndex(currentProp.id)].title,
-          readTime: compute_readTime(allBlock[findNextIndex(currentProp.id)].content.length)
+          id: allBlock[findNextIndex(currentProp.id, 1)].id,
+          title: allBlock[findNextIndex(currentProp.id, 1)].title,
+          readTime: compute_readTime(allBlock[findNextIndex(currentProp.id, 1)].content.length)
+        }}
+        onClick={handleNextClick}
+      />
+      <NextBlock
+        {...{
+          id: allBlock[findNextIndex(currentProp.id, 2)].id,
+          title: allBlock[findNextIndex(currentProp.id, 2)].title,
+          readTime: compute_readTime(allBlock[findNextIndex(currentProp.id, 2)].content.length)
         }}
         onClick={handleNextClick}
       />

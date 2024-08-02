@@ -47,7 +47,7 @@ export default function Home() {
               <a className='text-indigo-700 hover:text-amber-500' href="https://www.linkedin.com/in/phutanate/" target="_blank">(linkedin)</a>
               <a className='text-indigo-700 hover:text-amber-500' href="https://github.com/pearlpisut" target="_blank">(github)</a>
               <a className='text-indigo-700 hover:text-amber-500' href="https://www.instagram.com/pearl1st/" target="_blank">(instagram)</a>
-              <a className='text-indigo-700 hover:text-amber-500' href="" target="_blank">(CV)</a>
+              <a className='text-indigo-700 hover:text-amber-500' href="https://github.com/pearlpisut/pearlpisut.github.io/blob/master/public/cv/cv.pdf" target="_blank">(CV)</a>
             </div>
           </div>
         </div>
