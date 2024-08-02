@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </div>
       <div className="body w-3/4 lg:w-1/2">
-        I also spend quite some time try writing these blogs ;)
+        I also try writing these blogs. Hope someone reads it a bit LOLL.
       </div>
       <div className="body blog-sec w-3/4 lg:w-1/2">
         <BlogSection prop={mergedData}/>
