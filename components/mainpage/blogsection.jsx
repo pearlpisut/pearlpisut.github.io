@@ -30,9 +30,9 @@ const BlogSection = ({prop}) => {
             <div id="highlight" className='font-serif lg:text-sm text-xs w-11/12'> {note.highlight} </div>
             <div id="written" className='lg:text-sm text-xs'>By Pearl on {note.written_date}</div>
           </div>
-          <div className='lg:w-1/3 w-1/4'>
+          <Link href={blogUrl} className='lg:w-1/3 w-1/4'>
             <img className='' src={`/pictures/${note.id}.jpg`} />
-          </div>
+          </Link>
         </div>
       )}
     ));

@@ -55,7 +55,7 @@ const Bloglayout = ({prop, allBlock}) => {
         <div className="sep2 w-1/3"></div>
         <div className="sep3 w-1/3"></div>
       </div>
-      <div id="up-next" className='mt-8'>Up Next</div>
+      <div id="up-next" className='mt-8 text-xl mb-6'>Up Next</div>
       <NextBlock
         {...{
           id: allBlock[findNextIndex(currentProp.id, 1)].id,

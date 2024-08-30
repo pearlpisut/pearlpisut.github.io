@@ -62,8 +62,9 @@ text{
 
 #blog-written-date{
   color: black;
-  -webkit-text-stroke-width: 0.4px;
-  -webkit-text-stroke-color: white;
+  text-shadow: 0px 0px 3px rgb(225, 225, 225);
+  /* -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: white; */
 }
 
 #sep-line{
