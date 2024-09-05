@@ -1,6 +1,6 @@
 const singapore = {
     "id": "singapore-trip",
-    "title": "Sometimes the more I don't like it, I will end up liking it more. Speaking of Singapore",
+    "title": "Sometimes the more I don't like it, I will end up liking it more: Singapore",
     "written_date": "August 1, 2024",
     "tag": ["travel", "self-discovery"],
     "highlight": `

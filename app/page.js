@@ -27,8 +27,8 @@ export default function Home() {
             I'm currently studying <secion className="text-blue-600">Deep Learning</secion>, and have worked 
             in <secion className="text-blue-600">full-stack dev </secion>  
             at <Link className='prof-link underline text-indigo-700 hover:text-amber-500' id='pantheon' href='https://www.pantheonlab.ai/'>Pantheon Lab</Link>. 
-            I do competitive programming mainly in  <secion className="text-blue-600">C++</secion> on 100+ problems on 
-            <Link className='prof-link underline text-indigo-700 hover:text-amber-500' id='pantheon' href='https://leetcode.com/u/chris_pearl/'> Leetcode</Link>.
+            {/* I do competitive programming mainly in  <secion className="text-blue-600">C++</secion> on 100+ problems on 
+            <Link className='prof-link underline text-indigo-700 hover:text-amber-500' id='pantheon' href='https://leetcode.com/u/chris_pearl/'> Leetcode</Link>. */}
             See my CV for full details!
             {/* , previously at
             <Link className='prof-link' id='pantheon' href='https://www.pantheonlab.ai/'> Pantheon Lab, </Link>

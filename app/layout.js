@@ -6,7 +6,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Pearl Phutanate Pisutsin",
-  description: "my personal site - what I want to tell you beyond the resume.",
+  description: "what does he do?",
+  icons: {
+    icon: '/pictures/newicon.png', // /public path
+  },
 };
 
 export default function RootLayout({ children }) {

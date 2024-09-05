@@ -36,7 +36,7 @@ const Bloglayout = ({prop, allBlock}) => {
     <div id="blog" className='w-3/4 lg:w-1/2'>
       <div id="blog-header">
         <div id="blog-heading" className='flex flex-col items-center justify-center text-center md:mb-10 mb-5'>
-          <h1 id="blog-title" className='font-bold text-white text-xl sm:text-2xl md:text-5xl w-5/6'>{prop.title}</h1>
+          <h1 id="blog-title" className='font-bold text-white text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl w-5/6'>{prop.title}</h1>
           <div id="blog-written-date" className='lg:text-xl lg:mt-5 mt-2 text-sm font-semibold'>{prop.written_date}</div>
           <div id="blog-tags">
             {prop.tag.map((tag, index) => (
